@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.4.0",
     "aws-amplify": "^1.1.36",
     "dotenv": "^8.1.0",
     "react": "^16.9.0",
