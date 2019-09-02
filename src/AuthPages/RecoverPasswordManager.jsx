@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
-import { AuthContext } from '../../AuthContext';
+import { AuthContext } from '../AuthContext';
 import { RecoverGetEmailForm } from './RecoverGetEmailForm';
-import "./Recover.css";
-import { RecoverSuccessMessage } from './RecoverSuccessMessage';
+import { RecoverSuccessMessage } from '../components/AuthPages/RecoverSuccessMessage';
 import { RecoverCreateNewPassword } from './RecoverCreateNewPassword';
 
 

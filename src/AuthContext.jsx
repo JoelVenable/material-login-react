@@ -19,7 +19,6 @@ export const AuthProvider = ({ children, history }) => {
         const userData = await Auth.currentSession();
         setUser(userData.idToken.payload.email);
         setIsAuthenticated(true);
-        console.log("Made it to here...");
       }
       catch (e) {
         if (e !== "No current user") {
@@ -35,11 +34,10 @@ export const AuthProvider = ({ children, history }) => {
 
   const login = async (email, password) => {
     // returns the promise object.
-    console.log("Login fired...");
     try {
       const loggedInUser = await Auth.signIn(email, password);
       console.log("Return from sign in: ", loggedInUser);
-      setUser(loggedInUser);
+      setUser(loggedInUser.signInUserSession.idToken.payload.email);
       setIsAuthenticated(true);
     }
     catch (e) {
@@ -105,7 +103,8 @@ export const AuthProvider = ({ children, history }) => {
       recoverPassword,
       changePassword
     },
-    getUser: Auth.currentAuthenticatedUser //method for the user to call
+    getUser: Auth.currentAuthenticatedUser, //method for the user to call
+    user
   };
 
   return (

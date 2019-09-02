@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import "./signup.css";
-import { AuthContext } from "../../AuthContext";
+import { AuthContext } from "../AuthContext";
 import { SignUpForm } from "./SignUpForm";
 import { ConfirmationForm } from "./ConfirmationForm";
+import { WelcomeContainer } from "../components/WelcomeContainer";
 
 export const SignUp = () => {
   const { actions } = useContext(AuthContext);
@@ -20,12 +20,14 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="Signup">
+    <WelcomeContainer>
       {step === 1 ? (
         <SignUpForm handleSubmit={handleSubmit} />
       ) : (
           <ConfirmationForm handleConfirm={handleConfirm} />
         )}
-    </div>
+
+
+    </WelcomeContainer>
   );
 };

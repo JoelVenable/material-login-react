@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import { LoaderButton } from '../LoaderButton';
-import './ChangePassword.css';
 import { AuthContext } from '../../AuthContext';
 import { withRouter } from 'react-router-dom';
 
