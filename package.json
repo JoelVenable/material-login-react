@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.0",
-    "aws-amplify": "^1.1.36",
+    "aws-amplify": "^6.15.6",
     "dotenv": "^8.1.0",
     "react": "^16.9.0",
     "react-bootstrap": "^0.32.4",
